@@ -1,0 +1,289 @@
+@import "../sass/scss/bootstrap-grid.scss";
+@import "../sass/scss/bootstrap-reboot.scss";
+@import "../sass/scss/bootstrap.scss";
+@import "../sass/fontawesome_scss/fontawesome.scss";
+@import "../sass/fontawesome_scss/regular.scss";
+@import "../sass/fontawesome_scss/solid.scss";
+
+body{
+  overflow-x:hidden;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+section{
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+@include media-breakpoint-down(sm){
+  section{
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+// variables
+$prim :#428bca;
+$sec:#6699ff;
+$ternary:#31b0d5;
+
+
+
+/*
+homepg statrts
+*/
+
+.bg-main{
+  margin-top:-8%;
+  
+}
+
+#main {
+  .main-prim{
+    color: $prim;
+  }
+}
+
+#appointment{position:relative;
+  
+  width:100%;
+  height:500px;
+  background-image: url("../img/appointment.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  h4{
+    color: $prim;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .bg-main{
+    margin-top:8%;
+     }
+     #main{
+       text-align: justify;
+     }
+ } 
+
+/*
+homepg ends
+*/
+
+/*
+ About pg starts
+*/
+#abt{
+  h3{
+    color:$prim;
+  }
+}
+#abt-main{
+  .feature{
+    color:$sec;
+    border:3px dotted $sec;
+    border-radius:100%;
+  }
+h6{
+  color:$prim;  
+}
+  
+}
+#abt-team{
+  .heading6{
+    color:$prim;
+    
+  }
+}
+/*
+ About pg ends
+*/
+/*
+departments  pg starts 
+
+*/
+
+#dept{
+  position: relative;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  background-image: url('../img/dept-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:600px;
+ 
+  
+   
+   
+  }
+  
+
+#dept-main{
+  h3{
+    color:$prim;
+    }
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 260px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; 
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  .flip-card-back {
+    background-color: $sec;
+    color: white;
+    transform: rotateY(180deg);
+    h5{position: relative;
+      line-height:260px;
+     
+     
+    }
+  }
+}
+
+
+@include media-breakpoint-down(sm){
+  #dept{
+    background-image: none;
+    height:auto;
+  }
+  #dept-main{
+    text-align: center;
+  }
+}
+/*
+departments  pg ends
+
+*/
+
+/*
+news  pg starts
+
+*/
+
+
+ #news{
+    .bg-news{
+      background-image: url('../img/news.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height:400px;
+      color:$prim;
+    }
+    .text{
+      position: relative;
+        top:300px;
+      padding:5px;
+      background-color: #f1f1f1;
+      width:100%;
+      text-align: center;
+    }
+
+ }
+#news-main{
+  a{
+    text-decoration: none;
+    color:#fff;
+    
+  }
+  h3,h5,h6{
+    color:$prim;
+  }
+}
+
+
+
+/*
+news  pg ends
+/*
+
+/*
+join-us  pg starts
+
+*/
+#join-us, #join-us-main{
+  h3{
+    color: $prim;
+  }
+}
+
+
+/*
+join-us  pg ends
+
+*/
+/*
+contact pg starts
+*/
+
+#contact-main{
+  position: relative;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  background-image:url('../img/contact.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 570px;
+  
+}
+.overlay{
+  position: absolute;
+  top:0;
+  height:570px;
+  width:100%;
+  background-color:$sec;
+  opacity:0.5;
+}
+#contact-form{
+  h3, .prim{
+    color:$prim;
+  }
+}
+
+@include media-breakpoint-down(sm){
+  #contact-main{
+    background-image: none;
+    height: auto;
+  }
+  .overlay{
+    display: none;
+    height:10px;
+  }
+}
+
+
+
+/*
+contact pg ends
+*/
+
+footer{
+  width:100%;
+  height:300px;
+  color:white;
+}
